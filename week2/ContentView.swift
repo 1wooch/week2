@@ -66,7 +66,12 @@ struct get_data_from_othe:View{
     }
 } */ // failed
 
-let toDoList=[ ["10:30AM","Wake up"],["12:00PM","3701 Lecture"],["3:15pm","WIL meeting"]]
+let toDoList=[
+    ["10:30AM","Wake up"],
+    ["12:00PM","3701 Lecture"],
+    ["3:15pm","WIL meeting"]
+]
+
 struct Hstack_list_view:View{
     var body:some View{
         List{
@@ -75,7 +80,7 @@ struct Hstack_list_view:View{
                     Text(todo[0]).font(.title2).frame(width:80).background(.green)
                     Text(todo[1])
                     Spacer()
-                    Image(systemName: todo[2]).foregroundColor(.blue)
+                    //Image(systemName: todo[2]).foregroundColor(.blue)// this cause problem but why????
                     
                 }
             }
