@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
         VStack {
@@ -18,6 +19,7 @@ struct ContentView: View {
         .padding()
     }
 }
+
 
 struct list_view:View{
     var body: some View{
@@ -31,9 +33,25 @@ struct list_view:View{
     }
 }
 
+struct foreach_list_view:View{
+    let todolist=["study 3701","WIL meeting","Peer mentoring ppt"]
+    
+    var body: some View{
+        List{
+            ForEach(todolist,id:\.self){ //what is id:\.self for?
+                
+                todo in Text(todo) //todo???
+                
+            }
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         //ContentView()
-        list_view()
+        //list_view()
+        foreach_list_view()
+        
     }
 }
