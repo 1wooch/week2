@@ -74,12 +74,17 @@ var toDoList=[
 
 struct Hstack_list_view:View{
     var body:some View{
-        VStack(alignment: .leading){
+        //VStack(alignment: .leading){
+        NavigationView{
+            
             List{
-                ForEach(toDoList,id:\.self){
-                    todo in ExtractedView(task:todo)
-                }
-            }
+                    ForEach(toDoList,id:\.self){
+                        todo in
+                        NavigationLink(destination: ExtractedView(task:todo)){
+                            ExtractedView(task:todo)
+                        }
+                    }
+            }.navigationTitle("My Tasks")
             Spacer()
         }.padding()
     }
