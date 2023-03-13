@@ -16,6 +16,7 @@
 		0896940329BF029E000104C1 /* week2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896940229BF029E000104C1 /* week2UITestsLaunchTests.swift */; };
 		0896941029BF0767000104C1 /* hstack_in_list_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896940F29BF0767000104C1 /* hstack_in_list_view.swift */; };
 		0896941529BF312A000104C1 /* ExtractedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896941429BF312A000104C1 /* ExtractedView.swift */; };
+		0896941829BF368D000104C1 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896941729BF368D000104C1 /* ListDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0896940F29BF0767000104C1 /* hstack_in_list_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hstack_in_list_view.swift; sourceTree = "<group>"; };
 		0896941129BF07F0000104C1 /* data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
 		0896941429BF312A000104C1 /* ExtractedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractedView.swift; sourceTree = "<group>"; };
+		0896941729BF368D000104C1 /* ListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		0896941629BF31CE000104C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0896941729BF368D000104C1 /* ListDetailView.swift */,
 				0896941429BF312A000104C1 /* ExtractedView.swift */,
 				089693E729BF029C000104C1 /* ContentView.swift */,
 			);
@@ -275,6 +278,7 @@
 			files = (
 				089693E829BF029C000104C1 /* ContentView.swift in Sources */,
 				0896941029BF0767000104C1 /* hstack_in_list_view.swift in Sources */,
+				0896941829BF368D000104C1 /* ListDetailView.swift in Sources */,
 				089693E629BF029C000104C1 /* week2App.swift in Sources */,
 				0896941529BF312A000104C1 /* ExtractedView.swift in Sources */,
 			);

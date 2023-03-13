@@ -80,7 +80,7 @@ struct Hstack_list_view:View{
             List{
                     ForEach(toDoList,id:\.self){
                         todo in
-                        NavigationLink(destination: ExtractedView(task:todo)){
+                        NavigationLink(destination: ListDetailView(item:todo)){
                             ExtractedView(task:todo)
                         }
                     }
