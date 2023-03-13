@@ -11,7 +11,7 @@ import SwiftUI
 struct week2App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Hstack_list_view() // change the name of view before run
         }
     }
 }

@@ -66,27 +66,25 @@ struct get_data_from_othe:View{
     }
 } */ // failed
 
-let toDoList=[
-    ["10:30AM","Wake up"],
-    ["12:00PM","3701 Lecture"],
-    ["3:15pm","WIL meeting"]
+var toDoList=[
+    ["10:30AM","Wake up","checkmark.circle"],
+    ["12:00PM","3701 Lecture","checkmark.circle"],
+    ["3:15pm","WIL meeting","xmark.circle"]
 ]
 
 struct Hstack_list_view:View{
     var body:some View{
-        List{
-            ForEach(toDoList,id:\.self){
-                todo in HStack{
-                    Text(todo[0]).font(.title2).frame(width:80).background(.green)
-                    Text(todo[1])
-                    Spacer()
-                    //Image(systemName: todo[2]).foregroundColor(.blue)// this cause problem but why????
-                    
+        VStack(alignment: .leading){
+            List{
+                ForEach(toDoList,id:\.self){
+                    todo in ExtractedView(task:todo)
                 }
             }
-        }
+            Spacer()
+        }.padding()
     }
 }
+
 
 
 struct ContentView_Previews: PreviewProvider {
@@ -95,5 +93,27 @@ struct ContentView_Previews: PreviewProvider {
         //list_view()
         //foreach_list_view()
         Hstack_list_view()
+    }
+}
+
+
+struct ExtractedView: View {
+    @State var task:[String] // if you want to change variable you need @State
+    var body: some View {
+        HStack{
+            Text(task[0]).font(.title2).frame(width:100).background(.green)
+            Text(task[1])
+            Spacer()
+            Image(systemName: task[2])
+            //Spacer()
+            //Image(systemName: todo[2]).foregroundColor(.blue)// this cause problem but why????
+        }.onTapGesture {
+            if(task[2]=="xmark.circle"){
+                task[2]="checkmark.circle"
+            }else{
+                task[2]="xmark.circle"
+            }
+            //print("\(task[1]) is ticked")
+        }
     }
 }
