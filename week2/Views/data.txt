@@ -1,0 +1,4 @@
+["10:30AM","Wake up","checkmark.circle"]
+["12:00PM","3701 Lecture","checkmark.circle"]
+["3:15pm","WIL meeting","xmark.circle"]
+

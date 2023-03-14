@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ExtractedView: View {
-    @State var task:[String] // if you want to change variable you need @State
+    @Binding var task:[String] // if you want to change variable you need @State
     var body: some View {
         HStack{
             Text(task[0]).font(.title2).frame(width:100).background(.green)
@@ -21,8 +21,10 @@ struct ExtractedView: View {
         }.onTapGesture {
             if(task[2]=="xmark.circle"){
                 task[2]="checkmark.circle"
+                print(task)
             }else{
                 task[2]="xmark.circle"
+                print(task)
             }
             //print("\(task[1]) is ticked")
         }

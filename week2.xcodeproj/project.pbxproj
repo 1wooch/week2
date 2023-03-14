@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		085DD92329C049310078D6ED /* data.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = data.md; sourceTree = "<group>"; };
 		089693E229BF029C000104C1 /* week2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089693E529BF029C000104C1 /* week2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week2App.swift; sourceTree = "<group>"; };
 		089693E729BF029C000104C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,7 +107,7 @@
 				089693E929BF029D000104C1 /* Assets.xcassets */,
 				089693EB29BF029D000104C1 /* Preview Content */,
 				0896940F29BF0767000104C1 /* hstack_in_list_view.swift */,
-				0896941129BF07F0000104C1 /* data.txt */,
+				085DD92329C049310078D6ED /* data.md */,
 			);
 			path = week2;
 			sourceTree = "<group>";
@@ -139,6 +140,7 @@
 		0896941629BF31CE000104C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0896941129BF07F0000104C1 /* data.txt */,
 				0896941729BF368D000104C1 /* ListDetailView.swift */,
 				0896941429BF312A000104C1 /* ExtractedView.swift */,
 				089693E729BF029C000104C1 /* ContentView.swift */,

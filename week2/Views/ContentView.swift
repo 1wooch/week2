@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 
 
@@ -66,27 +67,62 @@ struct get_data_from_othe:View{
     }
 } */ // failed
 
-var toDoList=[
-    ["10:30AM","Wake up","checkmark.circle"],
-    ["12:00PM","3701 Lecture","checkmark.circle"],
-    ["3:15pm","WIL meeting","xmark.circle"]
-]
+
+func printLine()->String{
+    let filename="/Users/s5145987/Desktop/week2/week2/Views/data.txt"
+    var str1:String
+    var Tese_Array:[String]=[]
+    
+    
+    
+    //var myCounter:Int
+    do {
+        let contents = try String(contentsOfFile: filename)
+        let lines = contents.split(separator: "\n")
+        //myCounter=lines.count
+        print("content is = ",contents)
+        print("lines is =",lines)
+        //should get contents
+        str1=String(lines[0])
+        print(type(of: contents))
+    }catch{
+        return(error.localizedDescription)
+        }
+    return str1
+    
+    
+    
+}
+
+
 
 struct Hstack_list_view:View{
+    //var toDoList=printLine()
+    var result = printLine()
+
+    @State var toDoList=[
+        ["10:30AM","Wake up","checkmark.circle"],
+        ["12:00PM","3701 Lecture","checkmark.circle"],
+        ["3:15pm","WIL meeting","xmark.circle"]
+    ]
+
+
+
     var body:some View{
+        
         //VStack(alignment: .leading){
         NavigationView{
-            
             List{
-                    ForEach(toDoList,id:\.self){
-                        todo in
+                    ForEach($toDoList,id:\.self){
+                        $todo in
                         NavigationLink(destination: ListDetailView(item:todo)){
-                            ExtractedView(task:todo)
+                            ExtractedView(task:$todo)
                         }
                     }
             }.navigationTitle("My Tasks")
             Spacer()
         }.padding()
+        Text(result)
     }
 }
 
